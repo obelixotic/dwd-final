@@ -3,8 +3,8 @@ var app = express();
 app.use(express.static('./public'));
 
 var bodyParser = require("body-parser");
-const url = require('url');
-const path = require('path');
+// const url = require('url');
+// const path = require('path');
 // var mustacheExpress = require('mustache-express');
 let message = [];
 
