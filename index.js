@@ -17,11 +17,19 @@ const PORT = process.env.PORT || 8000;
 var {
   Client
 } = require('pg');
+
 var client;
 
-client = new Client({
-  database: 'inclass3'
-});
+if (process.env.DATABASE_URL) {
+  client = new Client({
+    connectionString: process.env.DATABASE_URL,
+    ssl: true
+  });
+} else {
+  client = new Client({
+    database: 'inclass3'
+  });
+}
 
 client.connect();
 
