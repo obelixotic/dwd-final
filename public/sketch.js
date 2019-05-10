@@ -133,7 +133,7 @@ function draw() {
   // fill(240);
   // rect(640 + 80, 0, 1420, 480);
 
-  image(img, 720, 0);
+  // image(img, 720, 0);
 
   // Should we speed up cycles per frame
   let cycles = speedSlider.value();
