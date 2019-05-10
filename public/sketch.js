@@ -357,13 +357,13 @@ function postData(url, data) {
       let pltN = map(element.nodes, 4, 12, 10, 450);
       let pltM = map(element.mutation, 0, 100, 450, 10);
       let pltG = map(element.generation, 1, 100, 450, 10);
-      let pltX = map(element.id, 1, 30, 750, 1340);
+      let pltX = map(element.id, 1, 20, 750, 1340);
       fill(255, 0, 0); //nodes = red
-      ellipse(pltX, pltN, 10, 10);
+      rect(pltX, pltN, 20, 450 - pltN);
       fill(0, 255, 0); //mutation = green
-      ellipse(pltX, pltM, 10, 10);
+      rect(pltX, pltM, 15, 450 - pltM);
       fill(0, 0, 255); //generation = blue
-      ellipse(pltX, pltG, 10, 10);
+      rect(pltX, pltG, 10, 450 - pltG);
     });
   });
 }
@@ -379,7 +379,7 @@ function getData(url) {
         let pltN = map(element.nodes, 4, 12, 10, 450);
         let pltM = map(element.mutation, 0, 100, 450, 10);
         let pltG = map(element.generation, 1, 100, 450, 10);
-        let pltX = map(element.id, 1, 30, 750, 1340);
+        let pltX = map(element.id, 1, 20, 750, 1340);
         fill(255, 0, 0); //nodes = red
         rect(pltX, pltN, 20, 450 - pltN);
         fill(0, 255, 0); //mutation = green
