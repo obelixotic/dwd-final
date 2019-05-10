@@ -228,7 +228,7 @@ function draw() {
   hiddenSpan.html("nodes: " + hiddenSlider.value() + " >> ");
   mutationSpan.html("mutation rate: " + mutationSlider.value() + "% >> ");
 
-  if (highScore > 150 && allowSaveToDb == true) {
+  if (highScore > 1000 && allowSaveToDb == true) {
     postData(`/log`, {
         nodes: HIDDEN, //HIDDEN from nn
         mutation: _mutation, //mutation*100 from nn
@@ -354,7 +354,7 @@ function postData(url, data) {
     rect(720, 0, 700, 472);
 
     jsonData.forEach(element => {
-      let pltN = map(element.nodes, 4, 8, 10, 450);
+      let pltN = map(element.nodes, 4, 12, 10, 450);
       let pltM = map(element.mutation, 0, 100, 450, 10);
       let pltG = map(element.generation, 1, 100, 450, 10);
       let pltX = map(element.id, 1, 10, 750, 1340);
@@ -376,10 +376,10 @@ function getData(url) {
     .then((jsonData) => {
 
       jsonData.forEach(element => {
-        let pltN = map(element.nodes, 4, 8, 10, 450);
+        let pltN = map(element.nodes, 4, 12, 10, 450);
         let pltM = map(element.mutation, 0, 100, 450, 10);
         let pltG = map(element.generation, 1, 100, 450, 10);
-        let pltX = map(element.id, 112, 134, 750, 1340);
+        let pltX = map(element.id, 1, 10, 750, 1340);
         fill(255, 0, 0); //nodes = red
         ellipse(pltX, pltN, 10, 10);
         fill(0, 255, 0); //mutation = green
