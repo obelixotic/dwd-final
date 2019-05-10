@@ -369,6 +369,7 @@ function postData(url, data) {
 }
 
 function getData(url) {
+  console.log("getData");
   fetch(url)
     .then((response) => {
       return response.json();
@@ -379,8 +380,8 @@ function getData(url) {
         let pltN = map(element.nodes, 4, 12, 10, 450);
         let pltM = map(element.mutation, 0, 100, 450, 10);
         let pltG = map(element.generation, 1, 100, 450, 10);
-        let pltX = map(element.id, 1, 20, 750, 1340);
-        fill(255, 0, 0); //nodes = red
+        let pltX = map(element.id, 1, 20, 730, 1340);
+        fill(255, 127, 127); //nodes = red
         rect(pltX, pltN, 20, 450 - pltN);
         fill(0, 255, 0); //mutation = green
         rect(pltX, pltM, 15, 450 - pltM);

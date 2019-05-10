@@ -34,9 +34,9 @@ if (process.env.DATABASE_URL) {
 client.connect();
 
 app.get('/getData', function(req, res1) {
-  client.query('SELECT * FROM nntest', function(err, result) {
+  client.query('SELECT * FROM neural', function(err, result) {
     if (err) {
-      console.log(error);
+      console.log(err);
     }
     for (let row of result.rows) {
       message.push(row);
@@ -51,14 +51,14 @@ app.post('/log', function(req, res2) {
   // var data = req.body;
   console.log(req.body);
 
-  client.query('INSERT INTO nntest (nodes, mutation, generation) VALUES ($1, $2, $3)', [req.body.nodes, req.body.mutation, req.body.generation], function(error, results) {
+  client.query('INSERT INTO neural (nodes, mutation, generation) VALUES ($1, $2, $3)', [req.body.nodes, req.body.mutation, req.body.generation], function(error, results) {
     if (error) {
       console.log(error);
     }
     // console.log('success!');
-    client.query('SELECT * FROM nntest', function(err, res3) {
+    client.query('SELECT * FROM neural', function(err, res3) {
       if (err) {
-        console.log(error);
+        console.log(err);
       }
       // let message = [];
       for (let row of res3.rows) {
