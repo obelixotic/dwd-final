@@ -357,7 +357,7 @@ function postData(url, data) {
       let pltN = map(element.nodes, 4, 8, 10, 450);
       let pltM = map(element.mutation, 0, 100, 450, 10);
       let pltG = map(element.generation, 1, 100, 450, 10);
-      let pltX = map(element.id, 112, 133, 750, 1340);
+      let pltX = map(element.id, 1, 10, 750, 1340);
       fill(255, 0, 0); //nodes = red
       ellipse(pltX, pltN, 10, 10);
       fill(0, 255, 0); //mutation = green
