@@ -357,7 +357,7 @@ function postData(url, data) {
       let pltN = map(element.nodes, 4, 12, 10, 450);
       let pltM = map(element.mutation, 0, 100, 450, 10);
       let pltG = map(element.generation, 1, 100, 450, 10);
-      let pltX = map(element.id, 1, 20, 750, 1340);
+      let pltX = map(element.id, 1, 20, 710, 1340);
       fill(255, 127, 127); //nodes = red
       rect(pltX, pltN, 20, 450 - pltN);
       rect(1180, 20, 20, 20);
@@ -393,7 +393,7 @@ function getData(url) {
         let pltN = map(element.nodes, 4, 12, 10, 450);
         let pltM = map(element.mutation, 0, 100, 450, 10);
         let pltG = map(element.generation, 1, 100, 450, 10);
-        let pltX = map(element.id, 1, 20, 730, 1340);
+        let pltX = map(element.id, 1, 20, 710, 1340);
         rect
         fill(255, 127, 127); //nodes = red
         rect(pltX, pltN, 20, 450 - pltN);
