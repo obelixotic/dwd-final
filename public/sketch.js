@@ -351,14 +351,14 @@ function postData(url, data) {
     // console.log(jsonData);
     // console.log(jsonData[0]);
     fill(255);
-    rect(720, 0, 700, 472);
+    rect(720, 0, 700, 470);
 
     jsonData.forEach(element => {
       let pltN = map(element.nodes, 4, 12, 10, 450);
       let pltM = map(element.mutation, 0, 100, 450, 10);
       let pltG = map(element.generation, 1, 100, 450, 10);
       let pltX = map(element.id, 1, 20, 750, 1340);
-      fill(255, 0, 0); //nodes = red
+      fill(255, 127, 127); //nodes = red
       rect(pltX, pltN, 20, 450 - pltN);
       rect(1180, 20, 20, 20);
 
@@ -387,7 +387,7 @@ function getData(url) {
     })
     .then((jsonData) => {
       fill(255);
-      rect(720, 0, 700, 472);
+      rect(720, 0, 700, 470);
 
       jsonData.forEach(element => {
         let pltN = map(element.nodes, 4, 12, 10, 450);
@@ -395,7 +395,7 @@ function getData(url) {
         let pltG = map(element.generation, 1, 100, 450, 10);
         let pltX = map(element.id, 1, 20, 730, 1340);
         rect
-        fill(255, 0, 0); //nodes = red
+        fill(255, 127, 127); //nodes = red
         rect(pltX, pltN, 20, 450 - pltN);
         rect(1180, 20, 20, 20);
 
