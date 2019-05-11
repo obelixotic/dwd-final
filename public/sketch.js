@@ -371,7 +371,6 @@ function postData(url, data) {
       rect(1300, 20, 20, 20);
 
       fill(0);
-      strokeWeight(1);
       textSize(14);
       text('N', 1180 - 20, 36);
       text('M', 1240 - 20, 36);
@@ -409,7 +408,6 @@ function getData(url) {
         rect(1300, 20, 20, 20);
 
         fill(0);
-        strokeWeight(1);
         textSize(14);
         text('N', 1180 - 20, 36);
         text('M', 1240 - 20, 36);
