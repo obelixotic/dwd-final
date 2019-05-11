@@ -360,10 +360,21 @@ function postData(url, data) {
       let pltX = map(element.id, 1, 20, 750, 1340);
       fill(255, 0, 0); //nodes = red
       rect(pltX, pltN, 20, 450 - pltN);
+      rect(1180, 20, 20, 20);
+
       fill(55, 255, 150); //mutation = green
       rect(pltX, pltM, 15, 450 - pltM);
+      rect(1240, 20, 20, 20);
+
       fill(55, 150, 255); //generation = blue
       rect(pltX, pltG, 10, 450 - pltG);
+      rect(1300, 20, 20, 20);
+
+      fill(0);
+      textSize(14);
+      text('N', 1180 - 20, 36);
+      text('M', 1240 - 20, 36);
+      text('G', 1300 - 20, 36);
     });
   });
 }
@@ -381,12 +392,23 @@ function getData(url) {
         let pltM = map(element.mutation, 0, 100, 450, 10);
         let pltG = map(element.generation, 1, 100, 450, 10);
         let pltX = map(element.id, 1, 20, 730, 1340);
-        fill(255, 127, 127); //nodes = red
+        fill(255, 0, 0); //nodes = red
         rect(pltX, pltN, 20, 450 - pltN);
+        rect(1180, 20, 20, 20);
+
         fill(55, 255, 150); //mutation = green
         rect(pltX, pltM, 15, 450 - pltM);
+        rect(1240, 20, 20, 20);
+
         fill(55, 150, 255); //generation = blue
         rect(pltX, pltG, 10, 450 - pltG);
+        rect(1300, 20, 20, 20);
+
+        fill(0);
+        textSize(14);
+        text('N', 1180 - 20, 36);
+        text('M', 1240 - 20, 36);
+        text('G', 1300 - 20, 36);
       });
     });
 }
